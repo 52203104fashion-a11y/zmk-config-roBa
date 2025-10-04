@@ -12,7 +12,7 @@
     quick-tap-ms = <0>;
 };
 
-&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
+&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)    //ここでバグってる
 
 &trackball {
     // automouse-layer = <4>;
