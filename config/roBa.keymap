@@ -62,6 +62,20 @@
             bindings = <&to 0 &macro_param_1to1 &kp MACRO_PLACEHOLDER>;
             label = "TO_LAYER_0";
         };
+
+        ad_id: ad_id {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp S &kp A &kp T &kp O &kp S &kp H &kp I &kp PERIOD &kp N &kp A &kp K &kp A &kp G &kp A &kp W &kp A &kp SLASH &kp P &kp W &kp C &kp PERIOD &kp C &kp O &kp M>;
+            label = "AD_ID";
+        };
+
+        ad_pw: ad_pw {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp NUMBER_2 &kp N0 &kp NUMBER_2 &kp NUMBER_5 &kp SLASH &kp LS(K) &kp E &kp I>;
+            label = "AD_PW";
+        };
     };
 
     behaviors {
@@ -110,9 +124,9 @@
         ARROW {
             bindings = <
 &kp LG(X)     &kp F7  &kp F8  &kp F9  &kp F11                      &kp LG(I)      &kp LG(F)           &kp LG(UP_ARROW)    &kp LC(F4)           &kp LC(LS(DELETE))
-&kp LG(SEMI)  &kp F4  &kp F5  &kp F6  &kp F12  &trans      &trans  &trans         &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none
+&kp LG(SEMI)  &kp F4  &kp F5  &kp F6  &kp F12  &trans      &trans  &trans         &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &ad_id
 &kp LG(APOS)  &kp F1  &kp F2  &kp F3  &kp F13  &trans      &trans  &kp LS(LG(V))  &kp LEFT_CONTROL    &trans              &kp LA(F4)           &kp TAB
-&trans        &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                                      &none
+&trans        &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                                      &ad_pw
             >;
 
             sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
