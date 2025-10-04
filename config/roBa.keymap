@@ -81,7 +81,7 @@
         default_layer {
             bindings = <
 &kp Q      &kp W    &kp E         &kp R           &kp T                                                                    &kp Y        &kp U  &kp I      &kp O      &kp P
-&kp A      &kp S    &kp D         &kp F           &kp G                   &bt BT_SEL 1                   &kp LS(LG(S))     &kp H        &kp J  &kp K      &kp L      &kp ENTER
+&kp A      &kp S    &kp D         &kp F           &kp G                   &msc MOVE_Y(10)                &kp LS(LG(S))     &kp H        &kp J  &kp K      &kp L      &kp ENTER
 &kp Z      &kp X    &kp C         &kp V           &kp B                   &bt BT_SEL 0                   &bt BT_SEL 2      &kp N        &kp M  &mkp LCLK  &mkp RCLK  &kp SLASH
 &kp LCTRL  &kp TAB  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 3 LEFT_GUI      &kp LEFT_CONTROL  &lt 2 ENTER                               &kp ESCAPE
             >;
@@ -109,9 +109,9 @@
 
         ARROW {
             bindings = <
-&kp LG(X)     &kp F7  &kp F8  &kp F9  &kp F11                      &kp LG(I)      &kp LG(F)           &kp LG(UP_ARROW)    &trans               &kp LC(LS(DELETE))
+&kp LG(X)     &kp F7  &kp F8  &kp F9  &kp F11                      &kp LG(I)      &kp LG(F)           &kp LG(UP_ARROW)    &kp LC(F4)           &kp LC(LS(DELETE))
 &kp LG(SEMI)  &kp F4  &kp F5  &kp F6  &kp F12  &trans      &trans  &trans         &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &none
-&kp LG(APOS)  &kp F1  &kp F2  &kp F3  &kp F13  &trans      &trans  &kp LS(LG(V))  &kp LEFT_CONTROL    &trans              &trans               &kp TAB
+&kp LG(APOS)  &kp F1  &kp F2  &kp F3  &kp F13  &trans      &trans  &kp LS(LG(V))  &kp LEFT_CONTROL    &trans              &kp LA(F4)           &kp TAB
 &trans        &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                                      &none
             >;
 
