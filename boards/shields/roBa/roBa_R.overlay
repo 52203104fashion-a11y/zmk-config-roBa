@@ -1,8 +1,4 @@
 #include "roBa.dtsi"
-#include <dt-bindings/zmk/input_transform.h>
-#include <input/processors.dtsi>
-
-&zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)    //ここでバグってる
 
 &default_transform {
     col-offset = <6>;
