@@ -152,10 +152,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans           &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans           &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(LS(TAB))  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans       &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(TAB)  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
