@@ -141,10 +141,10 @@
 
         ARROW {
             bindings = <
-&kp LG(X)     &kp F7  &kp F8  &kp F9  &kp F11                      &kp LG(I)      &kp LG(F)           &kp LG(UP_ARROW)    &kp LC(F4)           &kp LC(LS(DELETE))
-&kp LG(SEMI)  &kp F4  &kp F5  &kp F6  &kp F12  &trans      &trans  &kp LS(LG(S))  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &ad_id
-&kp LG(APOS)  &kp F1  &kp F2  &kp F3  &kp F13  &trans      &trans  &kp LS(LG(V))  &kp LEFT_CONTROL    &trans              &kp LA(F4)           &kp TAB
-&trans        &trans  &trans  &trans  &trans   &trans      &trans  &trans                                                                      &ad_pw
+&kp LG(X)     &kp F7       &kp F8  &kp F9  &kp F11                      &kp LG(I)      &kp LG(F)           &kp LG(UP_ARROW)    &kp LC(F4)           &kp LC(LS(DELETE))
+&kp LG(SEMI)  &kp F4       &kp F5  &kp F6  &kp F12  &trans      &trans  &kp LS(LG(S))  &kp LG(LEFT_ARROW)  &kp LG(DOWN_ARROW)  &kp LG(RIGHT_ARROW)  &ad_id
+&kp LG(APOS)  &kp F1       &kp F2  &kp F3  &kp F13  &trans      &trans  &kp LS(LG(V))  &kp LEFT_CONTROL    &trans              &kp LA(F4)           &kp TAB
+&trans        &kp LG(TAB)  &trans  &trans  &trans   &trans      &trans  &trans                                                                      &ad_pw
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
