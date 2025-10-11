@@ -9,7 +9,8 @@
 
 &trackball_listener {
     /* XY 反転（上下逆付けの応急処置） */
-    input-processors = < 
+
+    input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
     >;
 
@@ -49,22 +50,28 @@
 
 / {
     /* 垂直スクロールだけをスケールする Scaler */
+
     input_processors {
         zip_wheel_only_scaler: zip_wheel_only_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
+
             /* 垂直スクロールのみ対象 */
+
             codes = <INPUT_REL_WHEEL>;
             track-remainders; /* 任意：余りを蓄積して滑らかに */
         };
 
         /* 水平スクロールだけをスケール（=0 で無効化） */
+
         zip_hwheel_killer: zip_hwheel_killer {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
+
             /* 水平スクロールのみ対象 */
+
             codes = <INPUT_REL_HWHEEL>;
         };
     };
@@ -146,10 +153,10 @@
 
         default_layer {
             bindings = <
-&kp Q      &kp W    &kp E         &kp R           &kp T                                                                    &kp Y            &kp U  &kp I      &kp O      &kp P
-&kp A      &kp S    &kp D         &kp F           &kp G                   &msc MOVE_Y(0)                 &bt BT_SEL 2      &kp H            &kp J  &kp K      &kp L      &kp ENTER
-&kp Z      &kp X    &kp C         &kp V           &kp B                   &bt BT_SEL 0                   &bt BT_SEL 1      &kp N            &kp M  &mkp LCLK  &mkp RCLK  &kp LEFT_BRACKET
-&kp LCTRL  &kp TAB  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 3 LEFT_GUI      &kp LEFT_CONTROL  &lt 2 BACKSPACE                               &lt_to_layer_0 5 ESC
+&kp Q      &kp W    &kp E         &kp R           &kp T                                                                              &kp Y            &kp U  &kp I      &kp O      &kp P
+&kp A      &kp S    &kp D         &kp F           &kp G                   &msc MOVE_Y(0)                 &lt_to_layer_0 4 C_AC_HOME  &kp H            &kp J  &kp K      &kp L      &kp ENTER
+&kp Z      &kp X    &kp C         &kp V           &kp B                   &none                          &none                       &kp N            &kp M  &mkp LCLK  &mkp RCLK  &kp LEFT_BRACKET
+&kp LCTRL  &kp TAB  &kp LEFT_ALT  &kp LEFT_SHIFT  &lt_to_layer_0 1 SPACE  &lt_to_layer_0 3 LEFT_GUI      &kp LEFT_CONTROL            &lt 2 BACKSPACE                               &lt_to_layer_0 5 ESC
             >;
 
             sensor-bindings = <&encoder_msc_down_up>;
@@ -186,10 +193,10 @@
 
         MOUSE {
             bindings = <
-&trans  &trans       &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans       &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &kp LG(TAB)  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
+&trans  &trans        &trans        &trans        &trans                      &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &kp LG(TAB)   &trans        &trans        &trans  &trans      &trans  &trans                          &trans
             >;
         };
 
