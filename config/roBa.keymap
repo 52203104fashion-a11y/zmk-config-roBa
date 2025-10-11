@@ -9,7 +9,6 @@
 
 &trackball_listener {
     /* XY 反転（上下逆付けの応急処置） */
-
     input-processors = < 
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
     >;
@@ -17,10 +16,12 @@
     scroll_mode {
         layers = <5>;
         input-processors = <
-            /* まず反転（上下逆付け対応を維持） */
-            &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT)
-            /* 次に移動→スクロールへマップ */
+            /* 1) XY移動 → スクロールへ変換（X→水平, Y→垂直） */
             &zip_xy_to_scroll_mapper
+            /* 2) 垂直スクロールを 8 倍（≒ speed 80 相当） */
+            &zip_wheel_only_scaler 8 1
+            /* 3) 水平スクロールは 0 倍（無効化） */
+            &zip_hwheel_killer 0 1
         >;
     };
 };
@@ -47,6 +48,27 @@
 };
 
 / {
+    /* 垂直スクロールだけをスケールする Scaler */
+    input_processors {
+        zip_wheel_only_scaler: zip_wheel_only_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            /* 垂直スクロールのみ対象 */
+            codes = <INPUT_REL_WHEEL>;
+            track-remainders; /* 任意：余りを蓄積して滑らかに */
+        };
+
+        /* 水平スクロールだけをスケール（=0 で無効化） */
+        zip_hwheel_killer: zip_hwheel_killer {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+            /* 水平スクロールのみ対象 */
+            codes = <INPUT_REL_HWHEEL>;
+        };
+    };
+
     combos {
         compatible = "zmk,combos";
 
