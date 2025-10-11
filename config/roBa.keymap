@@ -18,8 +18,8 @@
         input-processors = <
             /* 1) XY移動 → スクロールへ変換（X→水平, Y→垂直） */
             &zip_xy_to_scroll_mapper
-            /* 2) 垂直スクロールを 8 倍（≒ speed 80 相当） */
-            &zip_wheel_only_scaler 1 1
+            /* 2) 垂直スクロールを x/y 倍（≒ speed 80 相当） */
+            &zip_wheel_only_scaler 1 2
             /* 3) 水平スクロールは 0 倍（無効化） */
             &zip_hwheel_killer 0 1
         >;
