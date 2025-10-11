@@ -22,6 +22,7 @@
             /* 次に移動→スクロールへマップ */
             &zip_xy_to_scroll_mapper
         >;
+    };
 };
 
 &mt {
