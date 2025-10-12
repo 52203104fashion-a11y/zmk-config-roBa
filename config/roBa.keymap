@@ -164,19 +164,19 @@
 
         FUNCTION {
             bindings = <
-&kp LS(NUMBER_1)       &kp LS(NUMBER_2)    &kp LS(NUMBER_3)    &kp LS(NUMBER_4)  &kp LS(N5)                                 &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)      &kp LS(N9)      &kp INT_RO
-&kp LS(DOUBLE_QUOTES)  &kp LS(APOSTROPHE)  &kp LS(LEFT_BRACE)  &kp LS(EQUAL)     &kp LS(MINUS)  &trans      &bt BT_CLR_ALL  &kp MINUS         &kp EQUAL   &kp LEFT_BRACE  &kp APOSTROPHE  &kp RIGHT_BRACE
-&kp LS(NON_US_HASH)    &kp LS(SEMI)        &kp LS(SLASH)       &kp LS(PERIOD)    &kp LS(COMMA)  &trans      &trans          &kp COMMA         &kp PERIOD  &kp SLASH       &kp SEMICOLON   &kp NON_US_HASH
-&kp LEFT_SHIFT         &trans              &kp INT_RO          &trans            &trans         &trans      &trans          &kp DEL                                                       &trans
+&kp LS(NUMBER_1)     &kp LS(NUMBER_2)    &kp LS(NUMBER_3)    &kp LS(NUMBER_4)  &kp LS(N5)                                 &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)        &kp LS(N9)      &kp INT_RO
+&kp LS(RIGHT_BRACE)  &kp LS(APOSTROPHE)  &kp LS(LEFT_BRACE)  &kp LS(EQUAL)     &kp LS(MINUS)  &trans      &bt BT_CLR_ALL  &kp MINUS         &kp EQUAL   &kp LEFT_BRACKET  &kp APOSTROPHE  &kp RIGHT_BRACKET
+&kp LS(NON_US_HASH)  &kp LS(SEMI)        &kp LS(SLASH)       &kp LS(PERIOD)    &kp LS(COMMA)  &trans      &trans          &kp COMMA         &kp PERIOD  &kp SLASH         &kp SEMICOLON   &kp NON_US_HASH
+&kp LEFT_SHIFT       &trans              &kp INT_RO          &trans            &trans         &trans      &trans          &kp DEL                                                         &trans
             >;
         };
 
         NUM {
             bindings = <
-&kp LEFT_ALT  &kp KP_NUMBER_7  &kp KP_NUMBER_8  &kp KP_NUMBER_9  &kp KP_PLUS                       &kp CARET   &kp AMPERSAND     &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp LC(S)
-&kp ASTERISK  &kp KP_NUMBER_4  &kp KP_NUMBER_5  &kp KP_NUMBER_6  &kp KP_MINUS  &trans      &trans  &none       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp LS(LC(SEMI))
-&kp SLASH     &kp KP_NUMBER_1  &kp KP_NUMBER_2  &kp KP_NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &none
-&trans        &trans           &kp KP_NUMBER_0  &trans           &trans        &trans      &trans  &trans                                                              &trans
+&kp LEFT_ALT  &kp N7        &kp N8        &kp N9        &kp KP_PLUS                       &kp CARET   &kp AMPERSAND     &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp LC(S)
+&kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS  &trans      &trans  &none       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp LS(LC(SEMI))
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &none
+&trans        &trans        &kp N0        &trans        &trans        &trans      &trans  &trans                                                              &trans
             >;
         };
 
