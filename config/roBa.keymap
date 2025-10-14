@@ -175,7 +175,7 @@
             bindings = <
 &kp LEFT_ALT  &kp N7        &kp N8        &kp N9        &kp KP_PLUS                       &kp CARET   &kp AMPERSAND     &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp LC(S)
 &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS  &trans      &trans  &none       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp LS(LC(SEMI))
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &none
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &kp LS(LC(MINUS))
 &trans        &trans        &kp N0        &trans        &trans        &trans      &trans  &trans                                                              &trans
             >;
         };
@@ -202,10 +202,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans            &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LEFT_CONTROL  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans                 &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                 &trans             &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(LC(SEMICOLON))  &kp LS(LC(MINUS))  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
             >;
 
             /* エンコーダ＝スクロールのまま（Ctrl/Cmdをスティッキーにして回す） */
