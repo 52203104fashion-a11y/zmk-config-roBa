@@ -164,10 +164,10 @@
 
         FUNCTION {
             bindings = <
-&kp LS(NUMBER_1)     &kp LS(NUMBER_2)    &kp LS(NUMBER_3)    &kp LS(NUMBER_4)  &kp LS(N5)                                 &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)        &kp LS(N9)      &kp INT_RO
-&kp LS(RIGHT_BRACE)  &kp LS(APOSTROPHE)  &kp LS(LEFT_BRACE)  &kp LS(EQUAL)     &kp LS(MINUS)  &trans      &bt BT_CLR_ALL  &kp MINUS         &kp EQUAL   &kp LEFT_BRACKET  &kp APOSTROPHE  &kp RIGHT_BRACKET
-&kp LS(NON_US_HASH)  &kp LS(SEMI)        &kp LS(SLASH)       &kp LS(PERIOD)    &kp LS(COMMA)  &trans      &trans          &kp COMMA         &kp PERIOD  &kp SLASH         &kp SEMICOLON   &kp NON_US_HASH
-&kp LEFT_SHIFT       &trans              &kp INT_RO          &trans            &trans         &trans      &trans          &kp DEL                                                         &trans
+&kp LS(NUMBER_1)     &kp LS(NUMBER_2)    &kp LS(NUMBER_3)    &kp LS(NUMBER_4)  &kp LS(N5)                         &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)        &kp LS(N9)      &kp INT_RO
+&kp LS(RIGHT_BRACE)  &kp LS(APOSTROPHE)  &kp LS(LEFT_BRACE)  &kp LS(EQUAL)     &kp LS(MINUS)  &trans      &trans  &kp MINUS         &kp EQUAL   &kp LEFT_BRACKET  &kp APOSTROPHE  &kp RIGHT_BRACKET
+&kp LS(NON_US_HASH)  &kp LS(SEMI)        &kp LS(SLASH)       &kp LS(PERIOD)    &kp LS(COMMA)  &trans      &trans  &kp COMMA         &kp PERIOD  &kp SLASH         &kp SEMICOLON   &kp NON_US_HASH
+&kp LEFT_SHIFT       &trans              &kp INT_RO          &trans            &trans         &trans      &trans  &kp DEL                                                         &trans
             >;
         };
 
@@ -175,7 +175,7 @@
             bindings = <
 &kp LEFT_ALT  &kp N7        &kp N8        &kp N9        &kp KP_PLUS                       &kp CARET   &kp AMPERSAND     &kp UP_ARROW    &kp LEFT_PARENTHESIS  &kp LC(S)
 &kp ASTERISK  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp KP_MINUS  &trans      &trans  &none       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW       &kp LS(LC(SEMI))
-&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &kp LS(LC(MINUS))
+&kp SLASH     &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp KP_EQUAL  &trans      &trans  &kp PERIOD  &kp LEFT_CONTROL  &mkp MB4        &mkp MB5              &kp LC(MINUS)
 &trans        &trans        &kp N0        &trans        &trans        &trans      &trans  &trans                                                              &trans
             >;
         };
@@ -202,10 +202,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                      &trans  &trans                 &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans                 &trans             &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &kp LS(LC(SEMICOLON))  &kp LS(LC(MINUS))  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                    &trans
+&trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans                 &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans                 &trans         &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &kp LS(LC(SEMICOLON))  &kp LC(MINUS)  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                                                &trans
             >;
 
             /* エンコーダ＝スクロールのまま（Ctrl/Cmdをスティッキーにして回す） */
@@ -215,10 +215,10 @@
 
         layer_6 {
             bindings = <
-&trans  &bt BT_CLR    &bt BT_CLR_ALL  &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&trans  &bt BT_SEL 3  &bt BT_SEL 4    &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
-&trans  &bt BT_SEL 0  &bt BT_SEL 1    &bt BT_SEL 2  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
-&trans  &trans        &trans          &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
+&trans  &bt BT_CLR    &none         &trans        &trans                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&trans  &bt BT_SEL 3  &bt BT_SEL 4  &trans        &trans  &trans      &trans       &trans        &trans        &trans        &trans        &trans
+&trans  &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &trans  &trans      &bootloader  &trans        &trans        &trans        &trans        &bt BT_CLR
+&trans  &trans        &trans        &trans        &trans  &trans      &trans       &trans                                                  &bt BT_CLR_ALL
             >;
         };
     };
