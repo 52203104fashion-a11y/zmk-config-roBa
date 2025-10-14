@@ -147,20 +147,6 @@
             tap-ms = <20>;
         };
 
-        sticky_ctrl: sticky_ctrl {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_CTRL";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL>;
-        };
-
-        sticky_cmd: sticky_cmd {
-            compatible = "zmk,behavior-sticky-key";
-            label = "STICKY_CMD";
-            #binding-cells = <0>;
-            bindings = <&kp LGUI>; /* macOSのCmd */
-        };
-
     };
 
     keymap {
@@ -219,7 +205,7 @@
             bindings = <
 &trans  &trans  &trans  &trans  &trans                      &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans  &sticky_ctrl  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans      &trans  &sk LCTRL  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans  &trans      &trans  &trans                          &trans
             >;
             /* エンコーダ＝スクロールのまま（Ctrl/Cmdをスティッキーにして回す） */
