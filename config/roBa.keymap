@@ -54,16 +54,7 @@
 
 
     input_processors {
-        zip_x_scaler: zip_x_scaler {
-            compatible = "zmk,input-processor-scaler";
-            #input-processor-cells = <2>;
-            type = <INPUT_EV_REL>;
-    
-            /* カーソル移動のX方向のみ対象 */
-            codes = <INPUT_REL_X>;
-            track-remainders;
-        };
-    
+
         zip_wheel_only_scaler: zip_wheel_only_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
