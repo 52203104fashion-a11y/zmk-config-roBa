@@ -12,6 +12,8 @@
 
     input-processors = <
         &zip_xy_transform (INPUT_TRANSFORM_X_INVERT | INPUT_TRANSFORM_Y_INVERT) 
+        &zip_y_scaler 7 8
+        &zip_x_scaler 4 3
     >;
 
     scroll_mode {
@@ -49,29 +51,35 @@
 };
 
 / {
-    /* 垂直スクロールだけをスケールする Scaler */
+
 
     input_processors {
+        zip_x_scaler: zip_x_scaler {
+            compatible = "zmk,input-processor-scaler";
+            #input-processor-cells = <2>;
+            type = <INPUT_EV_REL>;
+    
+            /* カーソル移動のX方向のみ対象 */
+            codes = <INPUT_REL_X>;
+            track-remainders;
+        };
+    
         zip_wheel_only_scaler: zip_wheel_only_scaler {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
-
+    
             /* 垂直スクロールのみ対象 */
-
             codes = <INPUT_REL_WHEEL>;
-            track-remainders; /* 任意：余りを蓄積して滑らかに */
+            track-remainders;
         };
-
-        /* 水平スクロールだけをスケール（=0 で無効化） */
-
+    
         zip_hwheel_killer: zip_hwheel_killer {
             compatible = "zmk,input-processor-scaler";
             #input-processor-cells = <2>;
             type = <INPUT_EV_REL>;
-
+    
             /* 水平スクロールのみ対象 */
-
             codes = <INPUT_REL_HWHEEL>;
         };
     };
