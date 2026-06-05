@@ -189,10 +189,10 @@
 
         SCROLL {
             bindings = <
-&trans  &trans  &trans  &trans  &trans                                &trans                   &trans  &trans                 &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans                   &trans  &trans                 &trans         &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &trans            &trans                   &trans  &kp LS(LC(SEMICOLON))  &kp LC(MINUS)  &trans
-&trans  &trans  &trans  &trans  &trans  &trans      &kp LG(LC(LEFT))  &kp LC(LG(RIGHT_ARROW))                                                &trans
+&trans  &trans  &trans  &trans  &trans                                                      &trans                   &trans  &trans                 &trans         &trans
+&trans  &trans  &trans  &trans  &trans                 &trans             &trans            &trans                   &trans  &trans                 &trans         &trans
+&trans  &trans  &trans  &trans  &trans                 &trans             &trans            &trans                   &trans  &kp LS(LC(SEMICOLON))  &kp LC(MINUS)  &trans
+&trans  &trans  &trans  &trans  &kp LC(LS(SEMICOLON))  &kp LC(MINUS)      &kp LG(LC(LEFT))  &kp LC(LG(RIGHT_ARROW))                                                &trans
             >;
 
             /* エンコーダ＝スクロールのまま（Ctrl/Cmdをスティッキーにして回す） */
