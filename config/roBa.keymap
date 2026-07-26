@@ -69,7 +69,6 @@
         };
     };
 
-
     macros {
         to_layer_0: to_layer_0 {
             compatible = "zmk,behavior-macro-one-param";
@@ -132,7 +131,7 @@
 &kp LS(NUMBER_1)     &kp LS(NUMBER_2)    &kp LS(NUMBER_3)    &kp LS(NUMBER_4)  &kp LS(N5)                         &kp LS(NUMBER_6)  &kp LS(N7)  &kp LS(N8)        &kp LS(N9)      &kp INT_RO
 &kp LS(RIGHT_BRACE)  &kp LS(APOSTROPHE)  &kp LS(LEFT_BRACE)  &kp LS(EQUAL)     &kp LS(MINUS)  &trans      &trans  &kp MINUS         &kp EQUAL   &kp LEFT_BRACKET  &kp APOSTROPHE  &kp RIGHT_BRACKET
 &kp LS(NON_US_HASH)  &kp LS(SEMI)        &kp LS(SLASH)       &kp LS(PERIOD)    &kp LS(COMMA)  &trans      &trans  &kp COMMA         &kp PERIOD  &kp SLASH         &kp SEMICOLON   &kp NON_US_HASH
-&kp LC(SEMICOLON)    &kp LC(MINUS)       &kp INT_RO          &kp LEFT_SHIFT    &trans         &trans      &trans  &kp DEL                                                         &trans
+&kp LC(SEMICOLON)    &kp LC(MINUS)       &kp LS(INT_RO)      &kp LEFT_SHIFT    &trans         &trans      &trans  &kp DEL                                                         &trans
             >;
         };
 
